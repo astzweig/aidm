@@ -7,7 +7,13 @@ No. AIDM modes are descriptive, not a quality ranking. They say how development 
 “60% AI-written” sounds precise but usually is not. Generated code may be edited, reorganized, rewritten, reviewed, or prompted through many iterations. Planning, debugging, testing, and architectural decisions also matter even when they do not map to lines of code. AIDM therefore describes workflow and agency.
 
 ## Why not use numeric levels?
-Numbers imply an ordered measurement with meaningful distances. The difference between “100” and “200” has no natural unit, and future insertions can make the scale harder to interpret. Named modes communicate intent directly and can be refined using the optional profile.
+The modes *are* ordered, from Autonomous down to Incidental, by how much agency AI has. What AIDM avoids is attaching numbers to that order. Numbers imply meaningful distances, invite averaging, and drift into being read as scores. Named modes keep the order useful for classification while making it harder to misuse as a rating.
+
+## Why would a project declare honestly?
+Because an accurate declaration is useful to the project itself. It tells contributors what workflow and review to expect, lets adopters calibrate their own review, and replaces speculation about AI use with a statement the project controls. Since no mode is ranked or colored as better, there is nothing to gain by understating AI involvement, and misdeclaring risks credibility once contributors see the real workflow. See the specification's "Why declare honestly" section.
+
+## How does AIDM relate to commit trailers, PR disclosure, or SPDX?
+They describe different things. Commit trailers and pull-request disclosure describe AI involvement in one change. SPDX's AI profile describes AI models shipped inside the software. AIDM describes the typical workflow of the whole project. They complement each other, and AIDM requires none of them. See the specification's "Relationship to other conventions" section.
 
 ## Does using Copilot/autocomplete automatically mean Incidental?
 Not necessarily. If autocomplete is the only AI use and it is occasional/local, Incidental is likely appropriate. If an AI assistant materially shapes design or implements bounded tasks, another mode may fit better.

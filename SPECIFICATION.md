@@ -23,6 +23,7 @@ An AIDM declaration:
 4. **Is understandable at a glance.** A named mode SHOULD be useful without reading a detailed profile.
 5. **Can be made precise when needed.** An optional profile and scope MAY accompany the headline mode.
 6. **Is a declaration, not detection.** The specification does not claim to verify whether a declaration is true.
+7. **Is an ordered spectrum of agency, not a scale of merit.** The headline modes are listed from greatest to least AI autonomy, and rules such as the tie-break in Section 5 rely on that order. The order says nothing about quality, maturity, skill, or trustworthiness, and no numeric value is attached to a mode.
 
 ## 3. Scope
 A declaration MUST describe a scope. The scope MAY be:
@@ -245,7 +246,31 @@ A project is **AIDM-profiled** if it additionally publishes a valid `.aidm.json`
 
 These terms indicate format/process conformance only. They are not certifications.
 
-## 12. Non-goals
+## 12. Why declare honestly
+AIDM only works if declarations are accurate, so the convention is designed to make honesty cheap and useful:
+
+- **Contributors know what to expect.** A declared mode tells newcomers how work is typically done, what review to expect, and which tools are welcome, before they open their first pull request.
+- **Reviewers and adopters can calibrate.** People evaluating a dependency can decide how closely to inspect it based on how it was built, without guessing.
+- **It preempts speculation.** Silence about AI use invites assumptions. A clear declaration replaces rumor with a statement the project controls.
+- **It anchors policy conversations.** Licensing, compliance, and procurement questions about AI-assisted development start from a shared vocabulary instead of ad-hoc explanations.
+- **There is no penalty for autonomy.** Badge colors are uniform, modes are not ranked, and the specification forbids deriving a score. Declaring Autonomous or Supervised carries no built-in stigma, so there is nothing to gain by understating AI involvement.
+
+A project that misdeclares gains little and risks its credibility when contributors and reviewers see a different workflow in practice.
+
+## 13. Relationship to other conventions
+AIDM describes the **development workflow of a project**. Other conventions describe different things and can be used alongside it:
+
+| Convention | Describes | Relationship to AIDM |
+| --- | --- | --- |
+| Commit trailers such as `Co-authored-by` or `Assisted-by` | AI involvement in an individual commit | Commit-level provenance. AIDM summarizes the typical workflow those commits come from. |
+| Pull-request disclosure policies | AI use in a single contribution | Contribution-level. A project may require PR disclosure and still declare a repository-level AIDM mode. |
+| SPDX AI profile and similar SBOM extensions | AI models and datasets shipped *inside* software | Describes the product's components. AIDM describes how the product was made. |
+| Contributor AI usage policies | What contributors are allowed to do | Prescriptive. AIDM is descriptive and can state the mode such a policy produces. |
+| "Made with AI" or "No AI" badges | A binary claim | AIDM replaces the binary with named modes and an optional profile. |
+
+AIDM does not replace any of these and does not require them.
+
+## 14. Non-goals
 AIDM does not attempt to:
 
 - determine copyright ownership,
@@ -258,7 +283,7 @@ AIDM does not attempt to:
 - prescribe whether AI should be used,
 - or replace project-specific contribution policies.
 
-## 13. Versioning
+## 15. Versioning
 The specification uses semantic versioning:
 
 - **Major:** incompatible changes to meanings or required declaration structure.
@@ -267,5 +292,5 @@ The specification uses semantic versioning:
 
 During the `0.x` draft period, maintainers SHOULD still avoid unnecessary changes to the meanings of established modes.
 
-## 14. Attribution
+## 16. Attribution
 AI Development Mode is an open specification created as part of **Astzweig's Social Contribution efforts** to encourage practical transparency around AI-assisted software development.

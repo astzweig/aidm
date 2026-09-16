@@ -23,7 +23,7 @@ AIDM gives repositories a simple README badge such as **AI Development: Collabor
 | **None** | No generative AI was intentionally used in the declared scope. |
 | **Mixed** | Distinct, materially different workflows are common; the project supplies a profile or scoped declarations. |
 
-The modes describe **workflow and agency**, not software quality, developer skill, trustworthiness, or the percentage of AI-generated code.
+The modes are ordered by AI agency, from most to least. They describe **workflow and agency**, not software quality, developer skill, trustworthiness, or the percentage of AI-generated code.
 
 ## Add a badge
 Replace `Collaborative` with the mode that best describes your project:
@@ -61,6 +61,9 @@ See [`schema/aidm.schema.json`](schema/aidm.schema.json), [`ADOPTION.md`](ADOPTI
 
 ## Which mode should I choose?
 Classify the **typical workflow for substantive changes** in the declared scope. Do not classify based on an exceptional one-off task. If two adjacent modes fit equally well, choose the mode that reflects **greater AI autonomy** and explain the nuance in `.aidm.json`. If materially different workflows are common, use **Mixed** or separate scoped declarations instead of averaging them.
+
+## Why declare?
+An accurate declaration tells contributors what workflow and review to expect, lets adopters calibrate their own review, and replaces speculation about AI use with a statement the project controls. No mode is ranked or colored as better, so there is nothing to gain by understating AI involvement.
 
 ## What AIDM is not
 AIDM is not an AI detector, authorship tracker, compliance certification, security guarantee, quality mark, or moral judgment. It does not attempt to infer provenance from source code. AIDM is a **self-declared transparency convention**.

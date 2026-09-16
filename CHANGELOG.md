@@ -4,6 +4,9 @@ The format is inspired by Keep a Changelog, and specification versions follow Se
 
 ## [Unreleased]
 
+- Design principle stating the modes are an ordered spectrum of agency, not merit.
+- "Why declare honestly" and "Relationship to other conventions" sections.
+
 ### Planned
 - Community feedback on mode boundaries and terminology.
 
