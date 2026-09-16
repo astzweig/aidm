@@ -1,0 +1,18 @@
+{
+  "spec_version": "0.1.0",
+  "mode": "mixed",
+  "scope": {
+    "type": "repository"
+  },
+  "profile": {
+    "planning": "shared",
+    "architecture": "human-led",
+    "implementation": "shared",
+    "testing": "shared",
+    "review": "human-led",
+    "human_review_frequency": "frequent",
+    "autonomous_scope": "feature"
+  },
+  "notes": "Core library work is Directed; experimental tooling is commonly Supervised. See component documentation for details.",
+  "last_reviewed": "2026-09-16"
+}

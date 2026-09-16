@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Specification — AI Development Mode</title>
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap nav"><a class="brand" href="index.html"><span>AI Development Mode</span></a>
+        <nav class="navlinks"><a href="specification.html">Specification</a><a href="adopt.html">Adopt</a><a href="faq.html">FAQ</a><a href="https://github.com/astzweig/aidm">GitHub</a></nav>
+      </div>
+    </header>
+    <main class="section">
+      <div class="wrap prose">
+        <div class="eyebrow">Specification · v0.1.0 draft</div>
+        <h1 style="font-size:clamp(2.5rem,6vw,4.6rem)">AI Development Mode</h1>
+        <p class="lead">A self-declared convention for communicating how human developers and generative AI systems shared agency during software development.</p>
+        <div class="callout"><strong>Core rule:</strong> classify the typical workflow for substantive changes. The modes describe process and agency, not quality, trust, skill, or AI-generated line count.</div>
+        <h2>The modes</h2>
+        <h3>Autonomous</h3>
+        <p>After receiving an initial goal, prompt, or specification, AI performs substantially the complete development process with little or no intermediate human direction.</p>
+        <h3>Supervised</h3>
+        <p>AI independently owns substantial multi-step development work, while a human reviews meaningful milestones and can redirect the work.</p>
+        <h3>Collaborative</h3>
+        <p>Human and AI develop the software together through frequent, iterative interaction, with both materially influencing decisions and implementation.</p>
+        <h3>Directed</h3>
+        <p>The human determines requirements, architecture, and implementation direction; AI is delegated bounded development tasks inside that direction.</p>
+        <h3>Assistive</h3>
+        <p>The human performs the core development work, while AI provides supporting assistance such as debugging, tests, documentation, explanations, review, or small snippets.</p>
+        <h3>Incidental</h3>
+        <p>Generative AI use is occasional, local, and not materially involved in technical direction or the substantive implementation workflow.</p>
+        <h3>None</h3>
+        <p>No generative AI was intentionally used in the declared development scope.</p>
+        <h3>Mixed</h3>
+        <p>Two or more materially different workflows are common and no single headline mode honestly characterizes the declared scope. Mixed requires a profile or explanation.</p>
+        <h2>Choosing a mode</h2>
+        <p>If two adjacent modes fit equally well, choose the mode reflecting greater AI autonomy and explain the nuance in the profile. If non-adjacent workflows are both common, do not average them: use Mixed or separate scopes.</p>
+        <h2>Optional profile</h2>
+        <table>
+          <tr>
+            <th>Field</th>
+            <th>Values</th>
+          </tr>
+          <tr>
+            <td>planning, architecture, implementation, testing, review</td>
+            <td>ai-led · shared · human-led · not-applicable</td>
+          </tr>
+          <tr>
+            <td>human_review_frequency</td>
+            <td>final · milestone · frequent · continuous · not-applicable</td>
+          </tr>
+          <tr>
+            <td>autonomous_scope</td>
+            <td>project · feature · task · suggestion · none</td>
+          </tr>
+        </table>
+        <h2>Machine-readable form</h2>
+        <p>The conventional filename is <code>.aidm.json</code>. A declaration must contain <code>spec_version</code>, <code>mode</code>, and <code>scope</code>.</p>
+        <pre>{
+  "spec_version": "0.1.0",
+  "mode": "collaborative",
+  "scope": { "type": "repository" }
+}</pre>
+        <h2>Badge</h2>
+        <p>The recommended label is <code>AI Development: &lt;Mode&gt;</code>. Colors should be neutral and consistent; do not use a red-to-green scale that suggests a rating.</p>
+        <h2>Non-goals</h2>
+        <p>AIDM does not establish copyright authorship, certify security/quality, detect AI-written code, quantify developer skill, or prescribe whether AI should be used.</p>
+        <h2>Full normative source</h2>
+        <p>The repository's <code>SPECIFICATION.md</code> is the normative source for the draft, including conformance and versioning details.</p>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="wrap footer-grid">
+        <div><strong>AI Development Mode</strong><br>Open, vendor-neutral development transparency.</div>
+        <div>Part of <strong>Astzweig's Social Contribution efforts</strong>.<br>MIT licensed · Specification draft v0.1.0</div>
+      </div>
+    </footer>
+    <script src="assets/site.js"></script>
+  </body>
+</html>

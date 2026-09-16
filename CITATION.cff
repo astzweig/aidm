@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: "AI Development Mode"
+message: "If you reference the AIDM specification in research or documentation, please cite this project."
+type: software
+version: 0.1.0
+date-released: 2026-09-16
+license: MIT
+abstract: "An open specification for disclosing how humans and generative AI shared agency during software development."
+keywords:
+  - artificial intelligence
+  - software development
+  - transparency
+  - provenance
+  - open specification

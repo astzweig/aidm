@@ -1,0 +1,25 @@
+{
+  "$schema": "https://aidevmode.org/schema/aidm.schema.json",
+  "spec_version": "0.1.0",
+  "mode": "collaborative",
+  "scope": {
+    "type": "repository"
+  },
+  "profile": {
+    "planning": "shared",
+    "architecture": "human-led",
+    "implementation": "ai-led",
+    "testing": "shared",
+    "review": "human-led",
+    "human_review_frequency": "continuous",
+    "autonomous_scope": "task"
+  },
+  "tools": [
+    {
+      "name": "Claude Code",
+      "purposes": ["planning", "implementation", "review", "documentation"]
+    }
+  ],
+  "last_reviewed": "2026-09-16",
+  "notes": "The specification, website, and tooling were drafted with an AI assistant in short iterations. The maintainer sets direction, reviews every change, and decides what is merged."
+}

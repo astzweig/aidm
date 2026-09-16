@@ -1,0 +1,29 @@
+{
+  "spec_version": "0.1.0",
+  "mode": "collaborative",
+  "scope": {
+    "type": "repository"
+  },
+  "profile": {
+    "planning": "shared",
+    "architecture": "human-led",
+    "implementation": "shared",
+    "testing": "shared",
+    "review": "human-led",
+    "human_review_frequency": "continuous",
+    "autonomous_scope": "task"
+  },
+  "tools": [
+    {
+      "name": "Example AI assistant",
+      "purposes": [
+        "planning",
+        "implementation",
+        "testing",
+        "documentation"
+      ]
+    }
+  ],
+  "last_reviewed": "2026-09-16",
+  "notes": "Maintainers work with AI in short iterations and review/integrate substantive changes."
+}

@@ -1,0 +1,7 @@
+{
+  "spec_version": "0.1.0",
+  "mode": "collaborative",
+  "scope": {
+    "type": "repository"
+  }
+}

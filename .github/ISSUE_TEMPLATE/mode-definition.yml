@@ -1,0 +1,35 @@
+name: Mode definition feedback
+description: Report an ambiguity or edge case in an AIDM mode
+title: "Mode definition: "
+labels: [specification]
+body:
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Workflow example
+      description: Describe the real or hypothetical human–AI workflow.
+    validations:
+      required: true
+  - type: dropdown
+    id: modes
+    attributes:
+      label: Which boundary is unclear?
+      options:
+        - Autonomous / Supervised
+        - Supervised / Collaborative
+        - Collaborative / Directed
+        - Directed / Assistive
+        - Assistive / Incidental
+        - Incidental / None
+        - Mixed / scoped declarations
+        - Other
+  - type: textarea
+    id: ambiguity
+    attributes:
+      label: What is ambiguous?
+    validations:
+      required: true
+  - type: textarea
+    id: wording
+    attributes:
+      label: Suggested clarification (optional)

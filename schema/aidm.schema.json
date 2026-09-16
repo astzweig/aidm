@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aidevmode.org/schema/aidm.schema.json",
+  "title": "AI Development Mode declaration",
+  "description": "Machine-readable declaration for AI Development Mode (AIDM) v0.1.x.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "spec_version",
+    "mode",
+    "scope"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "Optional pointer to the AIDM JSON Schema for editor support."
+    },
+    "spec_version": {
+      "type": "string",
+      "pattern": "^0\\.1(?:\\.\\d+)?$"
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "autonomous",
+        "supervised",
+        "collaborative",
+        "directed",
+        "assistive",
+        "incidental",
+        "none",
+        "mixed"
+      ]
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "repository",
+            "release",
+            "component",
+            "branch",
+            "period",
+            "other"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "planning": {
+          "$ref": "#/$defs/agency"
+        },
+        "architecture": {
+          "$ref": "#/$defs/agency"
+        },
+        "implementation": {
+          "$ref": "#/$defs/agency"
+        },
+        "testing": {
+          "$ref": "#/$defs/agency"
+        },
+        "review": {
+          "$ref": "#/$defs/agency"
+        },
+        "human_review_frequency": {
+          "type": "string",
+          "enum": [
+            "final",
+            "milestone",
+            "frequent",
+            "continuous",
+            "not-applicable"
+          ]
+        },
+        "autonomous_scope": {
+          "type": "string",
+          "enum": [
+            "project",
+            "feature",
+            "task",
+            "suggestion",
+            "none"
+          ]
+        }
+      }
+    },
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "model": {
+            "type": "string",
+            "minLength": 1
+          },
+          "purposes": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "enum": [
+                "planning",
+                "architecture",
+                "implementation",
+                "testing",
+                "review",
+                "debugging",
+                "documentation",
+                "other"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "last_reviewed": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "project_url": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "$defs": {
+    "agency": {
+      "type": "string",
+      "enum": [
+        "ai-led",
+        "shared",
+        "human-led",
+        "not-applicable"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "mixed"
+          }
+        },
+        "required": [
+          "mode"
+        ]
+      },
+      "then": {
+        "anyOf": [
+          {
+            "required": [
+              "profile"
+            ]
+          },
+          {
+            "required": [
+              "notes"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

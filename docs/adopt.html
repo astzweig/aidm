@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Adopt — AI Development Mode</title>
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap nav"><a class="brand" href="index.html"><span>AI Development Mode</span></a>
+        <nav class="navlinks"><a href="specification.html">Specification</a><a href="adopt.html">Adopt</a><a href="faq.html">FAQ</a><a href="https://github.com/astzweig/aidm">GitHub</a></nav>
+      </div>
+    </header>
+    <main class="section">
+      <div class="wrap prose">
+        <div class="eyebrow">Adoption guide</div>
+        <h1 style="font-size:clamp(2.5rem,6vw,4.6rem)">Add AIDM to your project.</h1>
+        <p class="lead">Start with one badge. Add a structured profile only if you want more detail.</p>
+        <h2>1. Find your mode</h2>
+        <div class="chooser">
+          <div id="chooser-q" class="question"><strong></strong></div>
+          <button data-answer="yes">Yes</button>
+          <button data-answer="no">No</button>
+          <button id="chooser-reset">Start over</button>
+          <div id="chooser-result" class="result"></div>
+        </div>
+        <h2>2. Add the badge</h2>
+        <p>Replace <code>Collaborative</code> with your chosen mode. Use the same neutral color for every mode.</p>
+        <div class="codebox">
+          <button class="copy" data-copy="#badge-code">Copy</button>
+          <pre id="badge-code">[![AI Development: Collaborative](https://img.shields.io/badge/AI%20Development-Collaborative-f97316)](https://aidevmode.org/)</pre>
+        </div>
+        <p class="small">The badge may link to the specification site or to your own <code>.aidm.json</code> declaration.</p>
+        <h2>3. Optionally add <code>.aidm.json</code></h2>
+        <div class="codebox">
+          <button class="copy" data-copy="#json-code">Copy</button>
+          <pre id="json-code">{
+  "spec_version": "0.1.0",
+  "mode": "collaborative",
+  "scope": { "type": "repository" },
+  "profile": {
+    "planning": "shared",
+    "architecture": "human-led",
+    "implementation": "shared",
+    "testing": "shared",
+    "review": "human-led",
+    "human_review_frequency": "continuous",
+    "autonomous_scope": "task"
+  }
+}</pre>
+        </div>
+        <h2>4. Review it when your workflow changes</h2>
+        <p>AIDM is a statement about the development process, so update it when the process materially changes. Release-scoped declarations are supported when history matters.</p>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="wrap footer-grid">
+        <div><strong>AI Development Mode</strong><br>Open, vendor-neutral development transparency.</div>
+        <div>Part of <strong>Astzweig's Social Contribution efforts</strong>.<br>MIT licensed · Specification draft v0.1.0</div>
+      </div>
+    </footer>
+    <script src="assets/site.js"></script>
+  </body>
+</html>

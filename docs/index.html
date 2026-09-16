@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="AI Development Mode is an open specification for disclosing how humans and generative AI worked together to build software.">
+    <title>AI Development Mode — Transparent AI-assisted software development</title>
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap nav"><a class="brand" href="index.html"><span>AI Development Mode</span></a>
+        <nav class="navlinks"><a href="specification.html">Specification</a><a href="adopt.html">Adopt</a><a href="faq.html">FAQ</a><a href="https://github.com/astzweig/aidm">GitHub</a></nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <div class="eyebrow">Open specification · Draft v0.1.0</div>
+          <h1>Say how AI helped build your software.</h1>
+          <p class="lead">AI Development Mode gives repositories a simple, human-readable way to disclose how much agency humans and generative AI had during development — without fake percentages or line-by-line attribution.</p>
+          <div class="actions"><a class="button" href="adopt.html">Add it to your README</a><a class="button secondary" href="specification.html">Read the specification</a></div>
+          <div class="badge-preview" aria-label="Example badge"><span>AI Development</span><span>Collaborative</span></div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap">
+          <h2>Named modes, not arbitrary levels.</h2>
+          <p class="section-intro">A mode describes the typical workflow for substantive changes. It is not a quality score and no mode is inherently better than another.</p>
+          <div class="modes">
+            <article class="mode"><span class="tag">Autonomous</span>
+              <h3>Goal → software</h3>
+              <p>AI performs substantially the complete development process after the initial goal or specification.</p>
+            </article>
+            <article class="mode"><span class="tag">Supervised</span>
+              <h3>AI owns large steps</h3>
+              <p>AI independently handles substantial multi-step work while humans review milestones and redirect.</p>
+            </article>
+            <article class="mode"><span class="tag">Collaborative</span>
+              <h3>Build together</h3>
+              <p>Human and AI shape decisions and implementation together through frequent feedback loops.</p>
+            </article>
+            <article class="mode"><span class="tag">Directed</span>
+              <h3>Human sets the path</h3>
+              <p>The human defines requirements, architecture, and approach; AI executes bounded tasks.</p>
+            </article>
+            <article class="mode"><span class="tag">Assistive</span>
+              <h3>AI supports</h3>
+              <p>The human performs core development; AI helps with debugging, tests, docs, review, and suggestions.</p>
+            </article>
+            <article class="mode"><span class="tag">Incidental / None</span>
+              <h3>Local or no AI use</h3>
+              <p>AI is only used occasionally for small local tasks, or is intentionally not used at all.</p>
+            </article>
+            <article class="mode mixed"><span class="tag">Mixed</span>
+              <h3>Different workflows? Say so.</h3>
+              <p>When materially different workflows are common, use Mixed with a profile or publish scoped declarations instead of averaging them into a meaningless number.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap profile">
+          <div>
+            <h2>One badge. More detail when it matters.</h2>
+            <p class="section-intro">The badge communicates quickly. An optional <code>.aidm.json</code> profile describes planning, architecture, implementation, testing, review frequency, and the largest scope AI can handle autonomously.</p>
+            <div class="callout"><strong>Not authorship tracking.</strong> AIDM describes the development process. It does not claim which individual lines came from a model.</div>
+          </div>
+          <div class="profile-card">
+            <h3>Example profile</h3>
+            <table>
+              <tr>
+                <td>Planning</td>
+                <td>Shared</td>
+              </tr>
+              <tr>
+                <td>Architecture</td>
+                <td>Human-led</td>
+              </tr>
+              <tr>
+                <td>Implementation</td>
+                <td>Shared</td>
+              </tr>
+              <tr>
+                <td>Testing</td>
+                <td>Shared</td>
+              </tr>
+              <tr>
+                <td>Review</td>
+                <td>Human-led</td>
+              </tr>
+              <tr>
+                <td>Human review</td>
+                <td>Continuous</td>
+              </tr>
+              <tr>
+                <td>Autonomous scope</td>
+                <td>Task</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap">
+          <h2>Built for easy adoption.</h2>
+          <div class="steps">
+            <div class="step"><strong>Choose the mode</strong><br><span class="small">Classify the typical workflow for substantive changes, not a one-off exception.</span></div>
+            <div class="step"><strong>Add a README badge</strong><br><span class="small">Use a neutral badge linked to the specification or your own declaration.</span></div>
+            <div class="step"><strong>Optionally add <code>.aidm.json</code></strong><br><span class="small">Give readers a structured profile without exposing prompts or source-level provenance.</span></div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap">
+          <h2>Open by design.</h2>
+          <p class="section-intro">AIDM is vendor-neutral, MIT licensed, and created as part of <strong>Astzweig's Social Contribution efforts</strong>. The goal is a small convention that communities can improve and reuse freely.</p>
+          <a class="button secondary" href="specification.html">Explore the draft</a></div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrap footer-grid">
+        <div><strong>AI Development Mode</strong><br>Open, vendor-neutral development transparency.</div>
+        <div>Part of <strong>Astzweig's Social Contribution efforts</strong>.<br>MIT licensed · Specification draft v0.1.0</div>
+      </div>
+    </footer>
+    <script src="assets/site.js"></script>
+  </body>
+</html>
