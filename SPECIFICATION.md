@@ -1,6 +1,6 @@
 # AI Development Mode Specification
 
-**Version 0.1.0 — Draft**  
+**Version 0.1.1 — Draft**  
 **Date:** 2026-09-16
 
 ## 1. Purpose
@@ -161,7 +161,7 @@ Minimal declaration:
 
 ```json
 {
-  "spec_version": "0.1.0",
+  "spec_version": "0.1.1",
   "mode": "collaborative",
   "scope": {
     "type": "repository"
@@ -173,7 +173,7 @@ Detailed declaration:
 
 ```json
 {
-  "spec_version": "0.1.0",
+  "spec_version": "0.1.1",
   "mode": "collaborative",
   "scope": {
     "type": "repository"

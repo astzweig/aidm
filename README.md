@@ -8,7 +8,7 @@ AIDM gives repositories a simple README badge such as **AI Development: Collabor
 > **Social Contribution**  
 > AI Development Mode is an open project created as part of **Astzweig's Social Contribution efforts**, with the goal of making AI-assisted software development easier to understand and discuss transparently.
 
-**Specification version:** 0.1.0 (draft)  
+**Specification version:** 0.1.1 (draft)  
 **Status:** Open for early adoption and feedback
 
 ## The modes
@@ -39,7 +39,7 @@ For more detail, add `.aidm.json` to your repository:
 
 ```json
 {
-  "spec_version": "0.1.0",
+  "spec_version": "0.1.1",
   "mode": "collaborative",
   "scope": {
     "type": "repository"

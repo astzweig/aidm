@@ -1,6 +1,6 @@
 {
   "$schema": "https://aidevmode.org/schema/aidm.schema.json",
-  "spec_version": "0.1.0",
+  "spec_version": "0.1.1",
   "mode": "collaborative",
   "scope": {
     "type": "repository"

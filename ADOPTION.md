@@ -62,7 +62,7 @@ If your workflow changes significantly over time, include scope information:
 
 ```json
 {
-  "spec_version": "0.1.0",
+  "spec_version": "0.1.1",
   "mode": "directed",
   "scope": {
     "type": "release",
