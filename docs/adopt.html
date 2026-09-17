@@ -8,33 +8,27 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="wrap nav"><a class="brand" href="index.html"><span>AI Development Mode</span></a>
+      <div class="wrap nav"><a class="brand" href="index.html">AI Development Mode</a>
         <nav class="navlinks"><a href="specification.html">Specification</a><a href="adopt.html">Adopt</a><a href="faq.html">FAQ</a><a href="https://github.com/astzweig/aidm">GitHub</a></nav>
       </div>
     </header>
     <main class="section">
       <div class="wrap prose">
         <div class="eyebrow">Adoption guide</div>
-        <h1 style="font-size:clamp(2.5rem,6vw,4.6rem)">Add AIDM to your project.</h1>
+        <h1>Add AIDM to your project.</h1>
         <p class="lead">Start with one badge. Add a structured profile only if you want more detail.</p>
         <h2>1. Find your mode</h2>
-        <div class="chooser">
-          <div id="chooser-q" class="question"><strong></strong></div>
-          <button data-answer="yes">Yes</button>
-          <button data-answer="no">No</button>
-          <button id="chooser-reset">Start over</button>
-          <div id="chooser-result" class="result"></div>
-        </div>
+        <p>Not sure which mode fits? <a href="index.html#find-your-mode">Answer a few questions on the homepage</a> to get a suggestion and a ready-made badge snippet.</p>
         <h2>2. Add the badge</h2>
         <p>Replace <code>Collaborative</code> with your chosen mode. Use the same neutral color for every mode.</p>
-        <div class="codebox">
-          <button class="copy" data-copy="#badge-code">Copy</button>
+        <div class="snippet">
+          <div class="snippet-head"><span>README badge</span><button class="link" data-copy="#badge-code">Copy</button></div>
           <pre id="badge-code">[![AI Development: Collaborative](https://img.shields.io/badge/AI%20Development-Collaborative-f97316)](https://aidevmode.org/)</pre>
         </div>
         <p class="small">The badge may link to the specification site or to your own <code>.aidm.json</code> declaration.</p>
         <h2>3. Optionally add <code>.aidm.json</code></h2>
-        <div class="codebox">
-          <button class="copy" data-copy="#json-code">Copy</button>
+        <div class="snippet">
+          <div class="snippet-head"><span>.aidm.json</span><button class="link" data-copy="#json-code">Copy</button></div>
           <pre id="json-code">{
   "spec_version": "0.1.1",
   "mode": "collaborative",
@@ -55,9 +49,9 @@
       </div>
     </main>
     <footer class="footer">
-      <div class="wrap footer-grid">
-        <div><strong>AI Development Mode</strong><br>Open, vendor-neutral development transparency.</div>
-        <div>Part of <strong>Astzweig's Social Contribution efforts</strong>.<br>MIT licensed · Specification draft v0.1.1</div>
+      <div class="wrap">
+        <p><strong>AI Development Mode</strong> · Open, vendor-neutral development transparency.</p>
+        <p>Part of Astzweig's Social Contribution efforts. MIT licensed · Specification draft v0.1.1</p>
       </div>
     </footer>
     <script src="assets/site.js"></script>
